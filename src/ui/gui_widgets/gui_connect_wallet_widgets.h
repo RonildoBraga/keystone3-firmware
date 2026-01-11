@@ -22,6 +22,7 @@ typedef enum {
     WALLET_LIST_SUB,
     WALLET_LIST_ZASHI,
     WALLET_LIST_SOLFARE,
+    WALLET_LIST_JUPITER,
     WALLET_LIST_NUFI,
     WALLET_LIST_BACKPACK,
     WALLET_LIST_RABBY,
@@ -84,7 +85,10 @@ typedef enum {
 
 typedef struct {
     WALLET_LIST_INDEX_ENUM index;
-    const lv_img_dsc_t *img;
+    const lv_img_dsc_t *walletIcon;
+    const char *walletName;
+    const lv_img_dsc_t **coinIcons;
+    uint8_t coinCount;
     bool enable;
 #ifdef BTC_ONLY
     bool alpha;
