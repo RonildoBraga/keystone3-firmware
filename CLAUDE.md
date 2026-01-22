@@ -1,12 +1,20 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code when working with the Keystone firmware.
 
 ## Project Overview
 
-Keystone is the firmware repository for the Keystone 3 Pro hardware cryptocurrency wallet. This is a fork/clone of [KeystoneHQ/keystone3-firmware](https://github.com/KeystoneHQ/keystone3-firmware) used to explore adding Blueberry as a supported software wallet.
+Keystone is a fork of [KeystoneHQ/keystone3-firmware](https://github.com/KeystoneHQ/keystone3-firmware) used to add Blueberry as a supported software wallet on the Keystone 3 Pro hardware cryptocurrency wallet.
 
-The firmware is written in C and Rust, runs on FreeRTOS on the MH1903 MCU, and uses LVGL for the UI.
+| Attribute | Value |
+|-----------|-------|
+| **Languages** | C, Rust |
+| **OS** | FreeRTOS |
+| **MCU** | MH1903 |
+| **UI Framework** | LVGL |
+| **Communication** | QR codes (UR encoding) |
+
+> **Repository Context:** This is part of the [blueberry](../) monorepo. See `../CLAUDE.md` for root orchestration and the full platform architecture.
 
 ## Development Environment
 
