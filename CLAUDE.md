@@ -48,13 +48,16 @@ pip install -r requirements.txt
 ### Simulator (UI Testing)
 
 ```bash
-make build    # Build the simulator
-make start    # Start the simulator
-make stop     # Stop the simulator
-make restart  # Restart the simulator
-make status   # Check if simulator is running
-make clean    # Clean build directory
-make rebuild  # Clean and rebuild
+make build         # Build the simulator
+make start         # Start the simulator
+make stop          # Stop the simulator
+make restart       # Restart the simulator
+make status        # Check if simulator is running
+make clean         # Clean build directory
+make rebuild       # Clean and rebuild
+make init-assets   # Initialize simulator assets (required before first run)
+make reset-assets  # Reset simulator assets to defaults
+make reset-wallet  # Reset wallet data (keeps device settings)
 ```
 
 The simulator allows testing UI changes without flashing to physical hardware.
@@ -136,7 +139,7 @@ The Keystone 3 Pro **verifies firmware signatures** during updates. Custom firmw
 
 ## Integration with Blueberry
 
-The Blackberry mobile app already has full Keystone integration:
+The Blueberry mobile app already has full Keystone integration:
 - `src/utils/keystone/urEncoder.ts` - Encodes transactions (uses "BlueberryMoney" as origin)
 - `src/utils/keystone/urDecoder.ts` - Decodes signatures
 - `src/utils/keystone/bcurDecoder.ts` - Parses HD keys and accounts
